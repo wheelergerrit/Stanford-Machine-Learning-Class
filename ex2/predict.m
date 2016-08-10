@@ -17,11 +17,10 @@ p = zeros(m, 1);
 for i = 1:m
     prediction = sigmoid(X(i,:)*theta);
     if prediction >= 0.5
-        p(i) = 1
+        p(i) = 1;
     else
-        p(i) = 0
+        p(i) = 0;
     end
-   
 end
 
 

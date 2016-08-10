@@ -20,19 +20,19 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 for i = 1:m
-    new_cost = y(i)*log(sigmoid(X(i,:)*theta)) + (1-y(i))*log(1-sigmoid(X(i,:)*theta))
-    J = J + new_cost
+    new_cost = y(i)*log(sigmoid(X(i,:)*theta)) + (1-y(i))*log(1-sigmoid(X(i,:)*theta));
+    J = J + new_cost;
    
 end
- J = J/(-m)
+ J = J/(-m);
 
 %This part below computes the gradient for a particular theta.
 for j = 1:length(theta)
-    grad_sum = 0
+    grad_sum = 0;
     for i = 1:m
-       grad_sum = grad_sum + (sigmoid(X(i,:)*theta)-y(i))*X(i,j)
+       grad_sum = grad_sum + (sigmoid(X(i,:)*theta)-y(i))*X(i,j);
     end
-    grad(j) = grad_sum/m
+    grad(j) = grad_sum/m;
 end
 
 
